@@ -103,11 +103,25 @@ STAGE "F"
 	Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap.
 	
 	+ SPRING CLOUD CONFIG SERVER.
+	+ ACTUATOR
 
 
 *Check the configuration: 
 	
 	localhost:8888/ms-item-server/default
+	
+	localhost:8888/ms-item-server/dev
+	
+	localhost:8888/ms-item-server/prod
+	
+	localhost:8007/get-config
+	
+	localhost:8005/get-config
+	
+	
+
+*ACTUATOR:
+localhost:8007/actuator/refresh
 	
 
 	
