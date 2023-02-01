@@ -1,0 +1,5 @@
+package ms.item.server.feignclient;
+
+public interface IProductFeignClient {
+
+}

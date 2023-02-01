@@ -1,0 +1,4 @@
+spring.application.name=ms-item-server
+spring.cloud.config.uri=http://localhost:8888
+
+

@@ -1,0 +1,9 @@
+package ms.gateway.server.filters.factory;
+
+import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
+import org.springframework.stereotype.Component;
+
+@Component
+public class Ex1GatewayFilterFactory extends AbstractGatewayFilterFactory<Ex1GatewayFilterFactory.Configuracion>{
+
+}

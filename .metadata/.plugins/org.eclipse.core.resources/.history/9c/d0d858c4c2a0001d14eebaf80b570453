@@ -1,0 +1,32 @@
+package ms.item.server.models.service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import ms.item.server.feignclient.IProductFeignClient;
+import ms.item.server.models.entity.Item;
+import ms.item.server.models.entity.Product;
+
+@Service
+public class ItemServiceImpl implements IItemService {
+
+	@Override
+	public List<Item> getProductList() {
+		return feingClient.getProductList().stream().map(p-> new Item(p,1)).collect(Collectors.toList());
+	}
+
+	@Override
+	public Product getProductById(Long id, Integer quantity) {
+
+		return null;
+	}
+
+	
+	@Autowired
+	private IProductFeignClient feingClient;
+	
+	
+}

@@ -1,0 +1,5 @@
+package ms.product.server.entity;
+
+public class Product {
+
+}

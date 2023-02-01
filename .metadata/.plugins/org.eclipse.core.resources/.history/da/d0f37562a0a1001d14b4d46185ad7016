@@ -1,0 +1,66 @@
+package ms.item.server.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+import ms.item.server.models.entity.Item;
+import ms.item.server.models.entity.Product;
+import ms.item.server.models.service.IItemService;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
+
+
+@RestController
+public class ItemController {
+
+	@GetMapping
+	public List<Item> getProductList(){
+		return ItemService.getProductItemList();
+	}
+	
+																														//HERE i USE DE CIRCUIT BREAKER WITH PROGRAMATION.
+	@GetMapping("/id/{id}/q/{q}")																						// THE "q" ID THE QUANTITY OF PRODUCTS FOR ITEM.
+	public Item getItem(@PathVariable Long id, @PathVariable Integer q) {	
+		return cbFactory.create("items")
+		.run(()-> ItemService.getItemById(id, q), e -> alternativeMethod1(id, q, e));		
+	}
+	
+																														//HERE i USE DE CIRCUIT BREAKER WITH ANNOTATION.
+	@CircuitBreaker(name="items",fallbackMethod="alternativeMethod1")
+	@GetMapping("/idx/{id}/qx/{q}")	
+	public Item getItem2(@PathVariable Long id, @PathVariable Integer q) {
+		return ItemService.getItemById(id, q);		
+	}
+	
+	public Item alternativeMethod1(Long id, Integer quantity, Throwable e) {
+		Item item = new Item();
+		Product product = new Product();
+		item.setQuantity(quantity);
+		product.setId(id);
+		product.setSku("xxxxxxxxxxx");
+		product.setName("Unnamed. Record not found!");
+		product.setPrice(0.00);
+		product.setOrigin("Unknown origin");
+		item.setProduct(product);
+		return item;
+	}
+	
+																														
+	
+	
+	
+	@Autowired
+	//@Qualifier("ItemServiceRestTemplateImpl")
+	@Qualifier("ItemServiceFeignImpl")
+	private IItemService ItemService;
+	
+	@Autowired
+	private CircuitBreakerFactory cbFactory; 
+	
+	
+}

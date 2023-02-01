@@ -1,0 +1,5 @@
+package ms.item.server.models.entity;
+
+public class Item {
+
+}

@@ -1,0 +1,6 @@
+package ms.item.server;
+
+
+public class AppCircuitBreakerConfig {
+
+}

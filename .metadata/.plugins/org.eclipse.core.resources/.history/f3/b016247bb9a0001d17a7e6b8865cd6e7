@@ -1,0 +1,5 @@
+package ms.product.server.controller;
+
+public class ProductController {
+
+}

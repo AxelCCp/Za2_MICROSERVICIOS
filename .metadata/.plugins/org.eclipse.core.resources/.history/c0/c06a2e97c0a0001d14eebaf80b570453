@@ -1,0 +1,15 @@
+package ms.item.server.models.service;
+
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import ms.item.server.models.entity.Product;
+
+public interface IItemService {
+
+	
+	public List<Product> getProductList();
+
+	public Product getProductById(@PathVariable Long id);
+	
+}
