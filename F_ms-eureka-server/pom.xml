@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ms.eureka.server</groupId>
-	<artifactId>E_ms-eureka-server</artifactId>
+	<artifactId>F_ms-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-eureka-server</name>
 	<description>Demo project for Spring Boot</description>

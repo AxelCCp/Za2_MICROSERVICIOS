@@ -124,7 +124,26 @@ STAGE "F"
 localhost:8007/actuator/refresh
 	
 
+------------------------------------------------------------------------------------------------------------------
 	
+STAGE "G"
+
+*Technologies:
+
+	MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+	Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+	SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB. 
+	
+	
+	
+	*Development of the complete CRUD between microservices Item and Products. It can be used with RestTemplate or Feign. You only need change the @Qualifier in the RestController of Item microservice.
+	
+	
+------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 	
 
