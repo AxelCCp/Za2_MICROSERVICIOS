@@ -108,7 +108,7 @@ public class ItemController {
 	private IItemService itemService;
 	
 	@Autowired
-	private CircuitBreakerFactory cbFactory; 
+	private CircuitBreakerFactory<?, ?> cbFactory; 
 	
 	private static final Logger logger = LoggerFactory.getLogger(ItemController.class);
 	
