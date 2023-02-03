@@ -1,7 +1,0 @@
-package ms.gateway.server.filters.factory;
-
-
-@Component
-public class GatewayFilterFactory1 {
-
-}

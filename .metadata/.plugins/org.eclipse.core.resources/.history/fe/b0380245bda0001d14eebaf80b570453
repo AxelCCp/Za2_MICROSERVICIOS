@@ -1,9 +1,0 @@
-INSERT INTO products (name, price, origin, create_at) VALUES('Iphone 14 Pro', 800, 'EEUU', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('sony', 700, 'Japan', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('Ipad', 1000, 'EEUU', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('sony notebook', 1000, 'China', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('Hewlett Packard', 500, 'EEUU', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('Bianchi', 600, 'China', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('nike', 100, 'China', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('adidas', 200, 'China', NOW());
-INSERT INTO products (name, price, origin, create_at) VALUES('reebok', 300, 'Vietnam', NOW());

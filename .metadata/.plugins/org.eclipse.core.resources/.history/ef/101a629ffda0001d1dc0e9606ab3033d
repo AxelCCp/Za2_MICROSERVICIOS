@@ -1,5 +1,0 @@
-package ms.zuul.server.filters;
-
-public class PostFilter {
-
-}

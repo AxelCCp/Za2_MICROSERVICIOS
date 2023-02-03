@@ -9,8 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
-import ms.item.server.models.entity.Product;
-
+import ms.commons.server.models.entity.Product;
 
 
 @FeignClient(name="ms-products-server")

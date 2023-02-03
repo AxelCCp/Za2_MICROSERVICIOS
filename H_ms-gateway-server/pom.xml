@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ms.gateway.server</groupId>
-	<artifactId>H_ms-gateway-server</artifactId>
+	<artifactId>ms-gateway-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-gateway-server</name>
 	<description>Demo project for Spring Boot</description>

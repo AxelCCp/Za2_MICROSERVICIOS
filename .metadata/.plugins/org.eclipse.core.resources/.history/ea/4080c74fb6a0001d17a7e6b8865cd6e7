@@ -1,5 +1,0 @@
-package ms.product.server.models.dao;
-
-public interface IProductDao {
-
-}

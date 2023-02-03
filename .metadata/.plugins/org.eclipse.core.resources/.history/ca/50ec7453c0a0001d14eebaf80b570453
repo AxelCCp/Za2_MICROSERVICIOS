@@ -1,8 +1,0 @@
-package ms.item.server.feignclient;
-
-import org.springframework.cloud.openfeign.FeignClient;
-
-@FeignClient(name="ms-products-server", url="localhost:8001")
-public interface IProductFeignClient {
-
-}

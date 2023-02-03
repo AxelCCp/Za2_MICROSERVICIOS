@@ -2,7 +2,8 @@ package ms.product.server.models.service;
 
 import java.util.List;
 
-import ms.product.server.entity.Product;
+import ms.commons.server.models.entity.Product;
+
 
 public interface IProductService {
 

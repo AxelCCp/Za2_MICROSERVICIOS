@@ -1,5 +1,7 @@
 package ms.item.server.models.entity;
 
+import ms.commons.server.models.entity.Product;
+
 public class Item {
 	
 	public Item() {

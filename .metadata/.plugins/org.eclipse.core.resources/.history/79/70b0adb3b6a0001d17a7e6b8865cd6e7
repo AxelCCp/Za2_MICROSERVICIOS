@@ -1,5 +1,0 @@
-package ms.product.server.models.service;
-
-public interface IProductService {
-
-}

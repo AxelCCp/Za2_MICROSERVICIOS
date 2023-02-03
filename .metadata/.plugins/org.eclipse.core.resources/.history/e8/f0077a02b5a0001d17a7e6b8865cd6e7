@@ -1,7 +1,0 @@
-package ms.product.server.entity;
-
-import java.io.Serializable;
-
-public class Product implements Serializable{
-
-}

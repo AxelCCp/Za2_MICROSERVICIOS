@@ -1,5 +1,0 @@
-package ms.item.server.models.service;
-
-public interface IItemService {
-
-}

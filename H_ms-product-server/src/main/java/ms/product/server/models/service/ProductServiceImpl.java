@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ms.product.server.entity.Product;
+import ms.commons.server.models.entity.Product;
 import ms.product.server.models.dao.IProductDao;
 
 @Service

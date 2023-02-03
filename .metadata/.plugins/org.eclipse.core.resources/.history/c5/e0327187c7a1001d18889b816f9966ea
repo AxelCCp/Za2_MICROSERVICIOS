@@ -1,5 +1,0 @@
-spring.application.name= ms-item-server
-spring.cloud.config.uri=http://localhost:8888
-spring.profiles.active=prod
-management.endpoints.web.exposure.include=*
-

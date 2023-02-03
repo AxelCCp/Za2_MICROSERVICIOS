@@ -1,9 +1,0 @@
-package ms.product.server.entity;
-
-import java.io.Serializable;
-
-public class Product implements Serializable{
-
-	private static final long serialVersionUID = -5984086879332606114L;
-
-}

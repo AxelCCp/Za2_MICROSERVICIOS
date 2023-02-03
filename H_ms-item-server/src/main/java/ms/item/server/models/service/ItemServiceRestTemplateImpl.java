@@ -15,8 +15,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import ms.commons.server.models.entity.Product;
 import ms.item.server.models.entity.Item;
-import ms.item.server.models.entity.Product;
 
 
 @Service("ItemServiceRestTemplateImpl")

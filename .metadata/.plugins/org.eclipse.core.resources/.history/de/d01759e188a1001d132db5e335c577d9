@@ -1,5 +1,0 @@
-package ms.gateway.server.filters.factory;
-
-public class GatewayFilterFactory1 {
-
-}

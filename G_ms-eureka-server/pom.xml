@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ms.eureka.server</groupId>
-	<artifactId>G_ms-eureka-server</artifactId>
+	<artifactId>ms-eureka-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-eureka-server</name>
 	<description>Demo project for Spring Boot</description>
@@ -33,6 +33,11 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+			<!-- https://mvnrepository.com/artifact/org.glassfish.jaxb/jaxb-runtime -->
+		<dependency>
+		    <groupId>org.glassfish.jaxb</groupId>
+		    <artifactId>jaxb-runtime</artifactId>
 		</dependency>
 		
 

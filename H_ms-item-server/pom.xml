@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ms.item.server</groupId>
-	<artifactId>H_ms-item-server</artifactId>
+	<artifactId>ms-item-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-item-server</name>
 	<description>Demo project for Spring Boot</description>
@@ -67,6 +67,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		
+		<dependency>
+			<groupId>ms.commons.server</groupId>
+			<artifactId>Z1_ms-commons-server</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 	

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ms.product.server</groupId>
-	<artifactId>G_ms-product-server</artifactId>
+	<artifactId>ms-product-server</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>ms-product-server</name>
 	<description>Demo project for Spring Boot</description>

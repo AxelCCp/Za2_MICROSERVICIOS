@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ms.commons.server.models.entity.Product;
 import ms.item.server.feignclient.IProductFeignClient;
 import ms.item.server.models.entity.Item;
-import ms.item.server.models.entity.Product;
 
 @Service("ItemServiceFeignImpl")
 public class ItemServiceFeignImpl implements IItemService {

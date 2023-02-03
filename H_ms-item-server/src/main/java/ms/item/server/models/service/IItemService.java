@@ -1,9 +1,9 @@
 package ms.item.server.models.service;
 
 import java.util.List;
-import ms.item.server.models.entity.Item;
-import ms.item.server.models.entity.Product;
 
+import ms.commons.server.models.entity.Product;
+import ms.item.server.models.entity.Item;
 
 public interface IItemService {
 
