@@ -141,8 +141,24 @@ STAGE "G"
 	
 ------------------------------------------------------------------------------------------------------------------
 
+STAGE "H"
+
+Project Microservice commons. Generation of jar with maven.
+
+*Technologies:
+
+	Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+	Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+	SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB. 
+
+	- mySql
+	+ H2
 
 
+	+ Library commons microservice development.
+	
+	
+------------------------------------------------------------------------------------------------------------------
 
 
 	
