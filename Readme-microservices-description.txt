@@ -220,7 +220,87 @@ STAGE i:
 	
 	Note : the accesses are still with permit all.
 
----------------------------------------------------------------------
+	---------------------------------------------------------------------
+			
+	STAGE i2:
+	
+	*Technologies:
+	
+		H2, MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+		Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+		SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB, Data rest, 
+		
+		+ Oauth2.
+		+ Zuul like a resource server with oauth2.
+		+ Timeout with hystrix (zuul).
+	
+		----------
+		
+		*Creation of new Microservice:
+		
+			Z2_ms-commons-users-server : develop of a new library project. Jar generation (mvnw.cmd install).
+		
+		*Modification of microservice:
+		
+			i2_ms-commons-users-server : modification for to work with Z2_ms-commons-users-server.
+		
+		*Creation of new Microservice:
+		
+			ms-oauth2-server : implementing security to microservices.
+			
+		*Zuul
+			
+			ms-oauth2.server now is registered in Zuul.
+			
+		----------
+			
+		*POSTMAN :
+		
+			Use "POST".
+			localhost:8090/z/security/oauth/token
+		
+			Token generation: 
+				
+				In "authorization" : 
+					Username : angularfrontwebapp
+					Password : 1234567
+					
+				In "body/x-www-form-urlencoded" :
+					Username : axelccp
+					Password : 1234567
+					Grand_type : password
+			
+	
+		Note : the accesses are still with permit all.
+		
+		----------
+	
+		*ms-springcloudconfig-server : configuration oauth2 "application.properties" on github.
+	
+		*ms-zuul-server : with spring cloud config.
+		
+		*ms-oauth2-server : with spring cloud config.
+		----------
+		
+		
+	---------------------------------------------------------------------
+
+
+	STAGE i3:
+
+
+		*Technologies:
+
+		H2, MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+		Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+		SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB, Data rest, commons, Oauth2,
+		Zuul like a resource server with oauth2, Timeout with hystrix (zuul).
+	
+		+CORS (of spring security oauth2, to connect a frontend that can be on another server).
+
+
+		
+
 
 
 	
