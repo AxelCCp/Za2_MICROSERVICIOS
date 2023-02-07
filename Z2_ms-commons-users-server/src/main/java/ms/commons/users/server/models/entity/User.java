@@ -85,6 +85,14 @@ public class User  implements Serializable{
 		this.roles = roles;
 	}
 
+	public Integer getIntentos() {
+		return intentos;
+	}
+
+	public void setIntentos(Integer intentos) {
+		this.intentos = intentos;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -104,5 +112,7 @@ public class User  implements Serializable{
 	@ManyToMany(fetch=FetchType.LAZY) 																											   // @UniqueConstraint : this is so that the pair of data cannot be repeated
 	@JoinTable(name="users_roles", joinColumns = @JoinColumn(name="user_id"), inverseJoinColumns = @JoinColumn(name="role_id"), uniqueConstraints = {@UniqueConstraint(columnNames={"user_id","role_id"})})
 	private List<Role>roles;
+	
+	private Integer intentos;
 
 }

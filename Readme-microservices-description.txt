@@ -299,8 +299,7 @@ STAGE i:
 		+CORS (of spring security oauth2, to connect a frontend that can be on another server).
 
 
-		
-
+		*handling of login attempts by the user in ms-oauth2-server.
 
 
 	
