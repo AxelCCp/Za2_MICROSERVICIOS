@@ -322,6 +322,64 @@ Zuul like a resource server with oauth2, Timeout with hystrix (zuul).
 + jwt
 
 
+------------------------------------------------------------------------------------------------------------------
+
+
+
+STAGE "K"
+
+
+*Technologies:
+
+H2, MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB, Data rest, commons, Oauth2,
+Zuul like a resource server with oauth2, Timeout with hystrix (zuul), Spring cloud gateway security.
+Webflux, jwt.
+
+Ms-products.server : with mysql. Now is a client of spring cloud config and the application.properties is in github.
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+STAGE "L"
+
+
+*Technologies:
+
+H2, MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB, Data rest, commons, Oauth2,
+Zuul like a resource server with oauth2, Timeout with hystrix (zuul), Spring cloud gateway security.
+Webflux, jwt.
+
++ postgreSQL
+
+Ms-users-server : with postgreSql Now is a client of spring cloud config and the properties file is in github.
+	
+
+------------------------------------------------------------------------------------------------------------------
+
+
+
+STAGE "M"
+
+*Technologies:
+
+H2, MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB, Data rest, commons, Oauth2,
+Zuul like a resource server with oauth2, Timeout with hystrix (zuul), Spring cloud gateway security.
+Webflux, jwt, postgreSQL.
+
+
+working on
+SLEUTH Y ZIPKIN
+
+...
+
 
 	
 
