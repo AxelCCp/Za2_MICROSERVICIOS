@@ -60,4 +60,16 @@ spring:
               message: Hi! It's a message from the Gateway Filter Factory if you call to ms-users-server from Spring Cloud Gateway... localhost:8091/g/users ... Bye!'
               cookieName: username
               cookieValue: Axelccp
+      - id: ms-oauth2-server
+        uri: lb://ms-oauth2-server
+        predicates:
+        - Path=/g/security/**
+        filters:
+        - StripPrefix=2
+      - id: ms-users-server
+        uri: lb://ms-users-server
+        predicates:
+        - Path=/g/users/**
+        filters:
+        - StripPrefix=2
         

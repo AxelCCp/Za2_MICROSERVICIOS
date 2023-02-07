@@ -1,6 +1,7 @@
 package ms.zuul.server.oauth2;
 
 import java.util.Arrays;
+import java.util.Base64;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -50,8 +51,8 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 	@Bean
 	public JwtAccessTokenConverter accessTokenConverter() {
 		JwtAccessTokenConverter tokenConverter	= new JwtAccessTokenConverter();
-		//tokenConverter.setSigningKey("secret_code_1234567");											//1 - usa esta con dato en duro, si no se levanta spring cloud config.
-		tokenConverter.setSigningKey(env.getProperty("config.security.oauth.jwt.key"));					//2 - levantando spring cloud config, lee la propiedad desde el application properties q está en github.
+		//tokenConverter.setSigningKey("secret_code_1234567");																					//1 - usa esta con dato en duro, si no se levanta spring cloud config.
+		tokenConverter.setSigningKey(Base64.getEncoder().encodeToString(env.getProperty("config.security.oauth.jwt.key").getBytes()));			//2 - levantando spring cloud config, lee la propiedad desde el application properties q está en github.
 		return tokenConverter;
 	}
 	
@@ -67,7 +68,7 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter{
 		return source;
 	}
 	
-	@Bean																								//el bean es para q quede configurado en todo spring y no solo en spring security.
+	@Bean																																		//el bean es para q quede configurado en todo spring y no solo en spring security.
 	public FilterRegistrationBean<CorsFilter>corsFilter(){
 		FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<CorsFilter>(new CorsFilter(corsConfigurationSource()));
 		bean.setOrder(Ordered.HIGHEST_PRECEDENCE); //4.4

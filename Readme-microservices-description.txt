@@ -302,6 +302,27 @@ STAGE i:
 		*handling of login attempts by the user in ms-oauth2-server.
 
 
+------------------------------------------------------------------------------------------------------------------
+
+
+
+STAGE "J"
+
+GATEWAY SECURITY CONFIGURATION 
+
+*Technologies:
+
+H2, MySql, Open Feign, Rest Template, JPA, Spring web, Eureka server, Hystrix and ribbon (TimeOut),
+Spring cloud gateway (Global Filter, Filter Factory), Resilience4J, Spring Cloud Bootstrap,
+SPRING CLOUD CONFIG SERVER, ACTUATOR, GIT & GITHUB, Data rest, commons, Oauth2,
+Zuul like a resource server with oauth2, Timeout with hystrix (zuul).
+
++ Spring cloud gateway security.
++ Webflux.
++ jwt
+
+
+
 	
 
 	
