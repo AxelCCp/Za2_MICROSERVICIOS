@@ -375,10 +375,94 @@ Zuul like a resource server with oauth2, Timeout with hystrix (zuul), Spring clo
 Webflux, jwt, postgreSQL.
 
 
-working on
-SLEUTH Y ZIPKIN
+	+ SLEUTH
+	
+	
+	+ ZIPKIN   
+		
+		Application.properties configurations
+		Application of @Autowired private Tracer tracer;
+		java -jar zipkin.jar
+	
+	
+	+RabbitMQ 
+		
+		Erlang installation.
+		RabbitMQ Installation.
+		Environment Variables configuration.
+		Installation of RabbitMQ plugins with … C:\WINDOWS\system32>rabbitmq-plugins enable rabbitmq_management
+		
+		Reset de RabbitMQ  in service and go to : http://localhost:15672
+		User : guest
+		Password: guest
+	
+	--------------
+	
+		RABBITMQ PORTS : 
+			CONSOLE BROWSER : 15672
+			SERVER : 5672 
+	
+	--------------
+		
+	Connecting zipkin with rabbit for connect the microservices with rabbit:
+	
+		zipkin.cmd file configuration. It is a script file for the configuration of Environment Variable. It connect zipkin with rabbit.
+		
+		Run zipkin : 
+			C:\Users>cd C:\developjava
+			C:\developjava>zipkin.cmd
+	
+	--------------
+	
+	
+	Connecting the MySql Storage with zipkin:
+	
+		https://github.com/openzipkin/zipkin/
+		https://github.com/openzipkin/zipkin/tree/master/zipkin-server
+		
+		
+		On zipkin.cmd file I create a new user of mysql "zipkin":
+		
+			Environment Variables configuration : 
+				STORAGE_TYPE=mysql
+				MYSQL_USER=zipkin
+				MYSQL_PASS=zipkin
+	
+		Now, I create a new database "zipkin" in workbench.
+		
+			Name=zipkin
+			Charset=utf8
+			Collation=utf8_bin
+		
+		After, create a new account in users and privileges.
+		
+		
+		Now, create a table with an other zipkin script:
+		
+			Copy paste :
+		
+			https://github.com/openzipkin/zipkin/blob/master/zipkin-storage/mysql-v1/src/main/resources/mysql.sql
+			
+		
+		Testing  review the traces with postman and the zipkin database.
+		
+				
 
-...
+				my zipkin.cmd
+				***************************************************
+				@echo off
+				set RABBIT_ADDRESSES=localhost:5672
+				set STORAGE_TYPE=mysql
+				set MYSQL_USER=zipkin
+				set MYSQL_PASS=zipkin
+				java -jar ./zipkin-server-2.24.0-exec.jar
+				***************************************************
+
+
+
+-----------------------------------------------------------------------------------------------------------------
+
+
 
 
 	

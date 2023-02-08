@@ -13,6 +13,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
+import brave.Tracer;
 import ms.commons.users.server.models.entity.User;
 import ms.oauth2.server.feign.IUserFeignClient;
 
@@ -30,8 +31,10 @@ public class UserService implements UserDetailsService, IUserService{
 		User user = userfeign.findByUsername(username);
 		
 		if(user == null) {
-			log.error("Login failed. The user '" + username + "' does not exist in the system!");
-			throw new UsernameNotFoundException("Login failed. The user '" + username + "' does not exist in the system!");
+			String error = "Login failed. The user '" + username + "' does not exist in the system!";
+			log.error(error);
+			tracer.currentSpan().tag("error.message", error);
+			throw new UsernameNotFoundException(error);
 		}
 		
 		List <GrantedAuthority> authorities = user.getRoles().stream()
@@ -53,6 +56,8 @@ public class UserService implements UserDetailsService, IUserService{
 	private IUserFeignClient userfeign;
 	
 	private Logger log = LoggerFactory.getLogger(UserService.class);
-
+	
+	@Autowired
+	private Tracer tracer; //stage M  C.135.
 	
 }
