@@ -36,7 +36,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="feign.FeignException"/>
     <fullyQualifiedTypeName name="org.springframework.security.authentication.AuthenticationEventPublisher"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
     <fullyQualifiedTypeName name="io.jsonwebtoken.security.Keys"/>
     <fullyQualifiedTypeName name="io.jsonwebtoken.Jwts"/>
     <fullyQualifiedTypeName name="javax.crypto.SecretKey"/>
@@ -60,4 +59,5 @@
     <fullyQualifiedTypeName name="org.springframework.security.config.web.server.SecurityWebFiltersOrder"/>
     <fullyQualifiedTypeName name="java.util.Base64"/>
     <fullyQualifiedTypeName name="brave.Tracer"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
 </qualifiedTypeNameHistroy>
