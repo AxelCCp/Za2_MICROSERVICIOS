@@ -6,6 +6,6 @@ import ms.usuarios.rr.models.entity.Usuario;
 
 public interface IUsuarioService {
 
-	public List<Usuario>findAllUusuarios();
+	public List<Usuario>findAllUsuarios();
 	
 }
